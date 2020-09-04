@@ -1,6 +1,7 @@
 GIT
-  remote: git://github.com/rails/rails.git
-  revision: c2e51b839491f8d440f7c75c22e9050a058f4467
+  remote: git://github.com/joelhawksley/rails.git
+  revision: a4141eee62820415ca0711a0be9eac0c6811806d
+  branch: render_in-layout
   specs:
     actioncable (6.1.0.alpha)
       actionpack (= 6.1.0.alpha)
