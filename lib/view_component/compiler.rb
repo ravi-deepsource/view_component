@@ -53,7 +53,7 @@ module ViewComponent
       # starting line number so errors that are raised will point to the
       # correct line in the component template.
       line_number =
-        if ActionView::Base.respond_to?(:annotate_rendered_view_with_filenames) &&
+        if Rails.version.to_f < 6.1 && ActionView::Base.respond_to?(:annotate_rendered_view_with_filenames) &&
           ActionView::Base.annotate_rendered_view_with_filenames
           -2
         else
