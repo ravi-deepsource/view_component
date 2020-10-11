@@ -202,6 +202,7 @@ module ViewComponent
       end
     end
 
+    # :nocov:
     def compiled_template(file_path)
       handler = ActionView::Template.handler_for_extension(File.extname(file_path).gsub(".", ""))
       template = File.read(file_path)
@@ -212,6 +213,7 @@ module ViewComponent
         handler.call(OpenStruct.new(source: template, identifier: component_class.identifier, type: component_class.type))
       end
     end
+    # :nocov:
 
     def call_method_name(variant)
       if variant.present? && variants.include?(variant)
