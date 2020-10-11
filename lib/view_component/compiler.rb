@@ -52,6 +52,7 @@ module ViewComponent
       # added with a comment. In this case, we want to return a different
       # starting line number so errors that are raised will point to the
       # correct line in the component template.
+      # :nocov:
       line_number =
         if Rails.version.to_f < 6.1 && ActionView::Base.respond_to?(:annotate_rendered_view_with_filenames) &&
           ActionView::Base.annotate_rendered_view_with_filenames
@@ -59,6 +60,7 @@ module ViewComponent
         else
           -1
         end
+      # :nocov:
 
       templates.each do |template|
         # Remove existing compiled template methods,
